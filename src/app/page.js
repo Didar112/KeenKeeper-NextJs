@@ -37,7 +37,7 @@ relationships that matter most.</p>
         {
           data.map((item, index)=> 
           
-          <div key={index} className="card bg-white w-96 shadow-sm ">
+          <div  key={index} className="card bg-white shadow-sm ">
   <figure className="px-10 pt-10">
     <Image
       src={item.picture}
@@ -48,11 +48,17 @@ relationships that matter most.</p>
 />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">Card Title</h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <h2 className="card-title font-semibold text-[20px]">{item.name}</h2>
+    <p><small className="font-normal text-[12px] text-[#64748B]">{item.days_since_contact} days ago</small></p>
     <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
+     {
+      item.tags.map((item, index) => <div key={index} className="badge badge-soft text-[#244D3F] bg-[#CBFADB] badge-success border-none">{item}</div>)
+     }
+     
     </div>
+    <span className={`badge border-none ${item.status==="overdue"?"bg-red-500":
+      item.status === "almost due"? "bg-yellow-400" : "bg-green-900"
+    } `}>{item.status}</span>
   </div>
 </div>)
         }
