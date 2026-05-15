@@ -33,7 +33,7 @@ relationships that matter most.</p>
 
         <h3 className="font-semibold text-2xl mt-10">Your Friends</h3>
 
-<div className="grid mt-10 grid-cols-4 gap-6">
+<div className="grid mt-10 grid-cols-4 gap-6 mb-20">
         {
           data.map((item, index)=> 
           
