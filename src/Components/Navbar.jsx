@@ -4,6 +4,7 @@ import logo from '../../public/kinkeeper_logo.png'
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { ImStatsDots } from "react-icons/im";
+import Link from 'next/link';
 
 
 
@@ -41,12 +42,18 @@ const Navbar = () => {
   </div>
   
   <div className="navbar-end gap-2">
+    <Link href="/">
     <button className="btn btn-ghost"><IoHomeOutline />
         Home</button>
+        </Link>
+        <Link href='/Timeline'>
     <button className="btn btn-ghost"><MdOutlineWatchLater />
 Timeline</button>
+</Link>
+<Link href='/Stat'>
     <button className="btn btn-ghost"><ImStatsDots />
 Stats</button>
+</Link>
   </div>
 </div>
 

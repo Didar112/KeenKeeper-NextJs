@@ -1,6 +1,12 @@
 import Navbar from "@/Components/Navbar";
 import Image from "next/image";
 import data from '../../public/data.json'
+import Link from "next/link";
+
+export const metadata = {
+  title: "Home",
+  description: "Welcome to the homepage of Keenkeeper",
+};
 
 export default function Home() {
   return (
@@ -37,7 +43,10 @@ relationships that matter most.</p>
         {
           data.map((item, index)=> 
           
-          <div  key={index} className="card bg-white shadow-sm ">
+            
+          <Link key={index} href={`/${item.id}`}>
+
+          <div  className="card bg-white shadow-sm ">
   <figure className="px-10 pt-10">
     <Image
       src={item.picture}
@@ -60,7 +69,13 @@ relationships that matter most.</p>
       item.status === "almost due"? "bg-yellow-400" : "bg-green-900"
     } `}>{item.status}</span>
   </div>
-</div>)
+          </div>
+
+
+         </Link>
+        
+        
+        )
         }
 </div>
     </section>
