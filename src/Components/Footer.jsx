@@ -8,7 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className='bg-[#244D3F]'>
+        <div className='bg-[#244D3F] p-3 px-8 md:p-0'>
             <div className='mx-auto container mb-5 text-white text-center '>
 
             <h1 className='text-[80px] font-1000 mt-[40px]'><span className='text-[80px] font-bold'>Keen</span  >Keeper</h1>

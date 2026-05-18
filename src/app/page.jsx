@@ -1,4 +1,4 @@
-import Navbar from "@/Components/Navbar";
+
 import Image from "next/image";
 import data from '../../public/data.json'
 import Link from "next/link";
@@ -11,9 +11,9 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-        <main>
+        <main className="p-5">
         <div className="hero flex gap-5 flex-col mt-[80px]">
-            <h1 className="font-bold text-[#1F2937] text-[48px]">Friends to keep close in your life</h1>
+            <h1 className="font-bold text-center text-[#1F2937] text-[48px]">Friends to keep close in your life</h1>
             <p className="text-center font-normal text-[16px] text-[#64748B]">Your personal shelf of meaningful connections. Browse, tend, and nurture the <br />
 relationships that matter most.</p>
             <button className="btn bg-[#244D3F] border-none shadow">
@@ -21,12 +21,12 @@ relationships that matter most.</p>
             </button>
 
 
-            {/* All friends */}
+     
 
 
-    <section className="container  mx-auto mt-[40px]">
+    <section className="container lg:p-0  mx-auto mt-[40px]">
 
-      <div className="grid grid-cols-4 gap-4 text-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
 
         <div className="p-[32px] shadow rounded"><h1 className="font-semibold text-[32px]">12</h1><p className="font-normal text-[18px] text-[#64748B]">total friends</p></div>
         <div className="p-[32px] shadow rounded"><h1 className="font-semibold text-[32px]">3</h1><p className="font-normal text-[18px] text-[#64748B]">On track</p></div>
@@ -39,7 +39,7 @@ relationships that matter most.</p>
 
         <h3 className="font-semibold text-2xl mt-10">Your Friends</h3>
 
-<div className="grid mt-10 grid-cols-4 gap-6 mb-20">
+<div className="grid mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
         {
           data.map((item, index)=> 
           
