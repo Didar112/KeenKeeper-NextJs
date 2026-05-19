@@ -10,6 +10,10 @@ import { FiPhoneCall } from "react-icons/fi";
 import { BsChatLeftText } from "react-icons/bs";
 import { IoVideocamOutline } from "react-icons/io5";
 import { useLogs } from '@/Context/LogContext';
+import { notFound } from 'next/navigation';
+
+
+
 
 const FriendDetails =  ({params}) => {
     const {details} = use(params) 
@@ -17,7 +21,9 @@ const FriendDetails =  ({params}) => {
 
 
     const {logs, addLog} = useLogs()
-
+    if(!target){
+        notFound()
+    }
     
     return (
        
@@ -55,7 +61,7 @@ const FriendDetails =  ({params}) => {
                 </span>
 
                 <div className="card-actions flex flex-wrap justify-center gap-2">
-                    {target.tags.map((item, index) => (
+                    {target.tags?.map((item, index) => (
                         <div
                             key={index}
                             className="badge badge-soft text-[#244D3F] bg-[#CBFADB] badge-success border-none"

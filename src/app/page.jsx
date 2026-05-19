@@ -1,14 +1,28 @@
 
 import Image from "next/image";
-import data from '../../public/data.json'
+
 import Link from "next/link";
 
 export const metadata = {
-  title: "Home",
+  title: "KeenKeeper - Home",
   description: "Welcome to the homepage of Keenkeeper",
 };
 
-export default function Home() {
+const fetchData = async () => {
+        const promise = await fetch("http://localhost:3000/data.json")
+        const res = promise.json()
+        return res; 
+}
+
+
+
+export default async function  Home() {
+
+
+
+  const data = await fetchData()
+
+
   return (
     <div>
         <main className="p-5">
