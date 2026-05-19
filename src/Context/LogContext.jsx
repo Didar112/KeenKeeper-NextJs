@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState } from "react"
+import { toast } from "react-toastify";
 
 const LogContext = createContext()
 
@@ -18,7 +19,17 @@ export const LogProvider = ({ children }) => {
         }
 
         setLogs([newLog, ...logs])
-        
+
+        if(type==="Call"){
+            toast.success(`Call with ${person}`)
+        }
+        else if(type==="Text")
+        {
+            toast.success(`Texted ${person}`)
+        } else if(type==="Video")
+        {
+            toast.success(`Video chat with ${person}`)
+        }
     }
 
     return (

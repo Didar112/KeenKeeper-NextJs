@@ -162,7 +162,7 @@ const FriendDetails =  ({params}) => {
 
                     <button onClick={()=>addLog("Call", target.name)}>
                   
-                <div  className="p-8 shadow rounded flex  flex-col items-center bg-[#f1f3f6]">
+                <div  className="p-8 shadow rounded flex cursor-pointer  flex-col items-center bg-[#f1f3f6]">
                     <h1 className="font-semibold text-[32px]">
                        <FiPhoneCall />
                     </h1>
@@ -176,7 +176,7 @@ const FriendDetails =  ({params}) => {
 
 
                 <button onClick={()=>addLog("Text", target.name)}>
-                <div className="p-8 bg-[#f1f3f6] flex  flex-col items-center shadow rounded">
+                <div className="p-8 bg-[#f1f3f6] flex cursor-pointer flex-col items-center shadow rounded">
                     <h1 className="font-semibold text-[32px]">
                         <BsChatLeftText />
                     </h1>
@@ -188,7 +188,7 @@ const FriendDetails =  ({params}) => {
                 </button>
 
                 <button onClick={()=>addLog("Video", target.name)}>
-                <div className="p-8 bg-[#f1f3f6] flex  flex-col items-center shadow rounded">
+                <div className="p-8 bg-[#f1f3f6] flex cursor-pointer  flex-col items-center shadow rounded">
                     <h1 className="font-semibold text-[32px]">
                         <IoVideocamOutline />
                     </h1>

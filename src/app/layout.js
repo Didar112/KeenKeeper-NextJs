@@ -4,6 +4,7 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import { LogProvider } from "@/Context/LogContext";
 import Provider from "@/lib/providers";
+import { ToastContainer, toast } from 'react-toastify';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,11 @@ export default function RootLayout({ children }) {
       <Provider>
         <Navbar></Navbar>
         {children}
+         <ToastContainer 
+          position="top-center"
+          autoClose={1000}
+
+         />
         <Footer></Footer>
         </Provider>
         </body>
